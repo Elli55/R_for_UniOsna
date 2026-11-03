@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.Rprofile
+your_scripts
+_archive
+env
+renv/
+renv.lock
+data/tagesschau.zip
