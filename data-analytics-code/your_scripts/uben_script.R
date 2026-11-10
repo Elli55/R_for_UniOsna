@@ -28,7 +28,18 @@ df_milck_compact |>
       arrange(age)
 
 df_milck_compact |> 
-  drop_na(organic_share)
+  drop_na(organic_share) |> 
+  
+    summarize(mean_organic = mean(organic_share))
+
+
+df_milck_compact |> 
+  drop_na(organic_share) |> 
+  group_by(gender) |> 
+  summarise(num_respondens = n(),
+            mean_organic = mean(organic_share))
+
+
 
 
 
