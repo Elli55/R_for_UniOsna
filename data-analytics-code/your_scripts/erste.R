@@ -3,3 +3,15 @@ contestant_choice <- c(1, 1, 2, 3, 2, 1, 2, 2, 2, 3)
 monty_opens <- c(3, 2, 1, 2, 3, 2, 1, 1, 1, 1)
 decision <- c("switch", "switch", "stay", "switch", "switch", "stay", "switch", "stay", "stay", "switch")
 
+monty:hall <- tibble::tibble(
+  prize_door,
+  contestant_choice,
+  monty_opens,
+  decision
+)
+
+# data change
+
+monty <- read_csv('data-analytics-code/data/body_measures.csv')
+
+
