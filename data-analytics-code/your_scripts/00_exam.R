@@ -55,6 +55,78 @@ specif
 
 total <- df_shopping |> 
   mutate(total_cost = price_euro * amount_stc) |> 
+  glimpse() |> 
+   
+  pull(total_cost) |> 
 
-  
-  
+  sum(na.rm = TRUE)
+
+total
+
+prozent <- specif / total
+prozent
+
+
+
+
+df_survey <- readRDS('data-analytics-code/data/milk_survey_compact.rds')
+
+class(df_survey)
+
+glimpse(df_survey)
+
+mean(df_survey$age)
+
+nrow(df_survey)
+
+ncol(df_survey)
+
+namess <- names(df_survey)
+first_for <- namess[1:4]
+first_for
+
+table(df_survey$diet)
+
+
+
+
+# df_tipple <- read_csv('data-analytics-code/data/limonade.csv')
+
+# df_dataframe <- read.csv('data-analytics-code/data/limonade.csv')
+
+
+# class(df_tipple)
+# class(df_dataframe)
+
+
+
+relevante_colm <- c(names(df_survey)[1:11])
+relevante_colm
+
+relevante_df <- df_survey |> 
+  select(all_of(relevante_colm)) |> 
+  glimpse()
+
+
+class(relevante_df)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
