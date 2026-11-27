@@ -19,7 +19,7 @@ diff %/% week_diff
 
 # shopping bonn ### 
 
-library(dplyr)
+
 library(tidyverse)
 
 items <- c("Milch", "Haferdrink", "Brot", "Käse", "Äpfel", "Schokolade")
@@ -111,10 +111,19 @@ relevante_df <- df_survey |>
 class(relevante_df)
 
 
+#### milck survey
 
+df_survey_csv <- read_csv('data-analytics-code/data/mds12_schoko_milch.csv')
 
+class(df_survey_csv)
 
+df_survey_csv |> 
+  # dim()
+  glimpse()
 
+df_survey_csv |> 
+  
+  filter(q004geschlecht %in% c(1L, 2L))
 
 
 
